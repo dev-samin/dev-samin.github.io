@@ -1,4 +1,4 @@
-let question = 
+let questionList = 
 [
     '좋아하는 음식과 싫어하는 음식은?',
     '사람들에게 어떤 첫 인상을 남기고 싶은가?',
@@ -27,12 +27,13 @@ let question =
 
 
 
-let a = document.getElementById('test');
+let card = document.getElementById('card');
+let question = document.getElementById('question');
 
-a.innerText = question[Math.floor(Math.random() * (question.length - 1))];
+question.innerText = questionList[Math.floor(Math.random() * (questionList.length - 1))];
 
-a.addEventListener('click', () => {
-    a.innerText = question[Math.floor(Math.random() * (question.length - 1))];
+card.addEventListener('click', () => {
+    question.innerText = questionList[Math.floor(Math.random() * (questionList.length - 1))];
 })
 
 
